@@ -12,5 +12,7 @@
 </head>
 <body>
     <h1><?php echo "Hola mundo mi nombre es: $Nombre";?></h1>
+    <!-- maneras distintas de imprimir en pantalla variables  -->
+    <h1><?php echo 'Hola mundo mi nombre es: ' . $nombre?></h1>
 </body>
 </html>
