@@ -65,8 +65,4 @@
                 default => "El valor de la variable <strong>B</strong> no es un valor valido"
             };
 
-
-
-
-
 ?>
