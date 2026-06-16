@@ -1,0 +1,12 @@
+{
+
+  "Etiqueta de apertura PHP": {
+    "prefix": "php",
+    "body": [
+      "<?php",
+      "$1"
+    ],
+    "description": "Genera la etiqueta de apertura de PHP"
+  }
+
+}
