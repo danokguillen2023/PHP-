@@ -4,6 +4,7 @@
     $edad = $_REQUEST['edad'];
     $sexo = $_REQUEST['sexo'];
     $roles = $_REQUEST['roles'];
+    $mensaje =$_REQUEST['mensaje'];
 
     $imagen = $_FILES['imagen'];
     $patch = $_SERVER['DOCUMENT_ROOT'] . '/PHP-/imagenes' . '/' . $imagen['name'];
@@ -31,5 +32,8 @@
     // var_dump($imagen);
 
     move_uploaded_file($imagen['tmp_name'], $patch);
+
+    echo "<p>Mensaje enviado 👌📨</p>";
+    echo "<p>$mensaje</p>";
 
 ?>
