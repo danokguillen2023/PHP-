@@ -44,6 +44,34 @@
 
         }
     }
+
+    //Metodo estatico para obtener todas las personas de la base de datos
+
+    public static function obtenerTodos(){
+        //nos conectamos a la base de datos
+        $db = CConexion::ConexionBD();
+
+        if($db == null){
+            echo "Error: No hay conexion a la base de datos";
+            return[]; //retornamos un arreglo vacio si falla
+        }
+
+        try {
+            //Preparamos la consulta para traer todos lo sregistros
+            $sql = "SELECT * FROM personas";
+            $stmt = $db->prepare($sql);
+            $stmt->execute();
+
+            //Devuelve todos los resultados como un arreglo asociativo
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $resultados;
+
+        } catch (PDOException $e) {
+            echo "<br>Error al obtener los datos: " . $e->getMessage();
+            return [];
+        }
+    }
+
     }
 
 ?>

@@ -13,6 +13,12 @@
 <body>
 
     <h2>Registro de Personas</h2>
+
+
+    <a href="ver_registro.php">Ver todas las personas registradas</a>
+    <br>
+    <br>
+
     
     <form action="index.php" method="POST">
         <label for="nombre">Nombre:</label><br>
